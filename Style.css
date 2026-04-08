@@ -1,0 +1,78 @@
+/* =========================================
+   SIAKAD MINI - BRIGHT CREAM THEME 
+   ========================================= */
+:root {
+    --primary-cream: #faedcd;    /* Krem Medium untuk Header */
+    --bright-cream: #fefae0;     /* KREM CERAH UTAMA (Background) */
+    --accent-brown: #d4a373;     /* Coklat Keemasan untuk Tombol */
+    --dark-brown: #3e2723;       /* Coklat Tua untuk Tulisan agar Jelas */
+    --card-bg: #ffffff;
+}
+
+body { 
+    background-color: var(--bright-cream);
+    background-image: radial-gradient(#d4a373 0.5px, transparent 0.5px);
+    background-size: 25px 25px; /* Tekstur titik halus */
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-brown);
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar Custom Cerah */
+.navbar-custom { 
+    background-color: var(--primary-cream);
+    padding: 30px 0;
+    border-bottom: 4px solid var(--accent-brown);
+    box-shadow: 0 4px 15px rgba(212, 163, 115, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-header {
+    height: 90px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+/* Card Aesthetic */
+.card-siakad { 
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(212, 163, 115, 0.1); 
+    padding: 30px !important;
+}
+
+/* Input & Select */
+.form-control, .form-select {
+    border: 2px solid #e9edc9;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #fdfcf0;
+}
+
+/* Tombol Proses */
+.btn-proses { 
+    background-color: var(--accent-brown);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-proses:hover { 
+    background-color: var(--dark-brown);
+    transform: translateY(-2px);
+}
+
+/* Khusus Print */
+@media print {
+    .no-print, .btn-proses, .navbar-custom a { display: none !important; }
+    body { background: white; }
+    .card-siakad { box-shadow: none !important; border: 1px solid #ddd; }
+}
